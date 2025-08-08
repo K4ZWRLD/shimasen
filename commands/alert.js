@@ -19,7 +19,7 @@ module.exports = {
 
         // Send the initial alert message
         await interaction.reply({
-            content: `🚨 Alert: ${targetUser}! You have been pinged by ${interaction.user}.`,
+            content: `# hello! are you still there? ⠀⠀ ◌⠀ ⠀${targetUser}! this is an activity alert! \n⠀⠀<:curv:1403269808799223891> ⠀ please respond or we'll close the ticket \n-# we do this to avoid having unused tickets cluttering the shop ^^`,
             ephemeral: false
         });
 
