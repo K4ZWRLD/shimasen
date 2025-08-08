@@ -14,8 +14,10 @@ module.exports = {
         
         // Send the message
         await interaction.reply({
-            content: message,
-            ephemeral: false
+            content: 'sent',
+            ephemeral: true
         });
+                // Send the actual message separately to the channel
+        await interaction.channel.send(message);
     },
 };
