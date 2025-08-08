@@ -45,6 +45,11 @@ const commands = [
     .setDescription('Make the bot say something')
     .addStringOption(opt => opt.setName('message').setDescription('Message to say').setRequired(true)),
 
+  // Alert command
+  new SlashCommandBuilder()
+    .setName('alert')
+    .setDescription('Alert a user and set a 1-hour timer to check for channel activity')
+    .addUserOption(opt => opt.setName('user').setDescription('The user to alert').setRequired(true)),
 
   // Loyalty card commands
   new SlashCommandBuilder()
