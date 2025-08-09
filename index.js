@@ -109,12 +109,12 @@ client.on('interactionCreate', async interaction => {
 client.once('ready', () => {
   console.log(`✅ Logged in as ${client.user.tag}`);
   console.log(`📊 Loaded ${client.commands.size} commands`);
-  
+
   client.user.setPresence({
     activities: [{ name: 'boost shimas!', type: 0 }], // Type 0 = Playing
     status: 'dnd'
   });
-  
+
   client.guilds.cache.forEach(guild => {
     initializeTicketCounter(guild);
   });

@@ -16,18 +16,18 @@ module.exports = {
                     { name: 'Spacer', value: 'spacer' },
                     { name: 'Normal', value: 'normal' }
                 )),
-    
+
     async execute(interaction) {
         const message = interaction.options.getString('message');
         const type = interaction.options.getString('type') || 'normal';
-        
+
         let finalMessage = message;
-        
+
         // If type is spacer, use the predefined spacer
         if (type === 'spacer') {
             finalMessage = "⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀";
         }
-        
+
         // Check if message is too long (Discord limit is 2000 characters)
         if (finalMessage.length > 2000) {
             return await interaction.reply({
@@ -35,20 +35,20 @@ module.exports = {
                 ephemeral: true
             });
         }
-        
+
         try {
             // Reply to the interaction first (ephemeral so only the command user sees it)
             await interaction.reply({
                 content: '✅ Message sent!',
                 ephemeral: true
             });
-            
+
             // Send the actual message separately to the channel
             await interaction.channel.send(finalMessage);
-            
+
         } catch (error) {
             console.error('Error sending message:', error);
-            
+
             // If we already replied, use followUp
             if (interaction.replied) {
                 await interaction.followUp({

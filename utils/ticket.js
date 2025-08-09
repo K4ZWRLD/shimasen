@@ -48,8 +48,8 @@ async function handleTicketInteractions(client, interaction) {
     // Create Ticket Button - Show Modal
     if (interaction.customId === 'create_ticket') {
       // Check if user already has an open ticket first
-    
-    
+
+
 
 
       // Create and show the modal
@@ -93,9 +93,9 @@ async function handleTicketInteractions(client, interaction) {
     // Handle Modal Submission - Create Ticket
     if (interaction.customId === 'ticket_modal') {
       // Double-check for existing ticket after modal submission
-      
 
-      
+
+
 
       // Get modal input values
       const itemType = interaction.fields.getTextInputValue('item_type');

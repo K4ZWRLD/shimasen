@@ -91,7 +91,7 @@ const commands = [
     opt.setName('item_type')
       .setDescription('Intro item description')
       .setRequired(true))
-  
+
   .addStringOption(opt =>
     opt.setName('item_name')
       .setDescription('First item name')
