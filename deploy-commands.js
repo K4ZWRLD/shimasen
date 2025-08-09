@@ -53,12 +53,17 @@ const commands = [
           { name: 'Normal', value: 'normal' }
         )),
 
-
   // Alert command
   new SlashCommandBuilder()
     .setName('alert')
     .setDescription('Alert a user and set a 1-hour timer to check for channel activity')
     .addUserOption(opt => opt.setName('user').setDescription('The user to alert').setRequired(true)),
+
+  // Ticket command
+  new SlashCommandBuilder()
+    .setName('ticket')
+    .setDescription('Setup the ticket panel')
+    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
   // Loyalty card commands
   new SlashCommandBuilder()
