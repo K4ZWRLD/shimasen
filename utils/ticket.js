@@ -48,11 +48,8 @@ async function handleTicketInteractions(client, interaction) {
     // Create Ticket Button - Show Modal
     if (interaction.customId === 'create_ticket') {
       // Check if user already has an open ticket first
-      const existingTicket = interaction.guild.channels.cache.find(
-        channel => channel.name.includes(`ticket-`) && 
-        channel.name.includes(interaction.user.username) &&
-        channel.parentId === TICKET_CATEGORY_ID
-      );
+    
+    
 
 
       // Create and show the modal
@@ -96,11 +93,7 @@ async function handleTicketInteractions(client, interaction) {
     // Handle Modal Submission - Create Ticket
     if (interaction.customId === 'ticket_modal') {
       // Double-check for existing ticket after modal submission
-      const existingTicket = interaction.guild.channels.cache.find(
-        channel => channel.name.includes(`ticket-`) && 
-        channel.name.includes(interaction.user.username) &&
-        channel.parentId === TICKET_CATEGORY_ID
-      );
+      
 
       
 
