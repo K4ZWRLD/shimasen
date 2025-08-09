@@ -43,7 +43,16 @@ const commands = [
   new SlashCommandBuilder()
     .setName('say')
     .setDescription('Make the bot say something')
-    .addStringOption(opt => opt.setName('message').setDescription('Message to say').setRequired(true)),
+    .addStringOption(opt => opt.setName('message').setDescription('Message to say').setRequired(true))
+    .addStringOption(opt =>
+      opt.setName('type')
+        .setDescription('Type of message')
+        .setRequired(false)
+        .addChoices(
+          { name: 'Spacer', value: 'spacer' },
+          { name: 'Normal', value: 'normal' }
+        )),
+
 
   // Alert command
   new SlashCommandBuilder()
