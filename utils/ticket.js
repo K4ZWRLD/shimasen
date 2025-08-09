@@ -167,6 +167,7 @@ async function handleTicketInteractions(client, interaction) {
           `𐔌　　◞　　𓈒ㅤ　**quantity**    :   ${quantity}\n` +
           `۶　　⠀ ׅ　　⸝⸝ 　**payment**   :   ${payment}`
         )
+        .setThumbnail(interaction.user.displayAvatarURL()) // Add this line
         .setColor(0x36393f);
 
       const actionRow = new ActionRowBuilder().addComponents(
@@ -186,7 +187,7 @@ async function handleTicketInteractions(client, interaction) {
       });
       await channel.send({
         content: '⠀　⠀𐐪　⠀ thanks for buying!　　  \n' +
-                 '⠀　　𐙚　　complete /order form 　 ₊  ◞　\n' +
+                 '⠀　　𐙚　　read our [tos](https://discord.com/channels/1306843108704649236/1322553399908106393) 　 ₊  ◞　\n' +
                  '˙　　˳　　⁺　　wait for assistance!',
         embeds: [orderDetailsEmbed], 
         components: [actionRow]
