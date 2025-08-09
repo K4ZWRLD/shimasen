@@ -102,11 +102,6 @@ async function handleTicketInteractions(client, interaction) {
         channel.parentId === TICKET_CATEGORY_ID
       );
 
-      if (existingTicket) {
-        return await interaction.reply({ 
-          content: `❌ You already have an open ticket: ${existingTicket}`, 
-          ephemeral: true 
-        });
       }
 
       // Get modal input values
