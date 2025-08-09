@@ -161,8 +161,8 @@ async function handleTicketInteractions(client, interaction) {
 
       // Create order details embed with modal information
       const orderDetailsEmbed = new EmbedBuilder()
+        .setTitle(`♡　𓈒ㅤ◞　　𖥔　　new order!`)
         .setDescription(
-          `♡　𓈒ㅤ◞　　𖥔　　**n__e__w or*d*er**\n` +
           `𓏏𓏏　　⠀ ׅ　　**item**    :   ${itemType}\n` +
           `𐔌　　◞　　𓈒ㅤ　**quantity**    :   ${quantity}\n` +
           `۶　　⠀ ׅ　　⸝⸝ 　**payment**   :   ${payment}`
