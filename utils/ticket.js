@@ -102,7 +102,7 @@ async function handleTicketInteractions(client, interaction) {
         channel.parentId === TICKET_CATEGORY_ID
       );
 
-      }
+      
 
       // Get modal input values
       const itemType = interaction.fields.getTextInputValue('item_type');
