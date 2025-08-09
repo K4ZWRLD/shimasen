@@ -25,7 +25,7 @@ module.exports = {
         
         // If type is spacer, use the predefined spacer
         if (type === 'spacer') {
-            finalMessage = "* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *\n* *";
+            finalMessage = "⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀\n⠀";
         }
         
         // Check if message is too long (Discord limit is 2000 characters)
